@@ -1,0 +1,16 @@
+CREDITS resources
+fonts, pictures, svg icons.
+These resources will be not used for commercial purpose.
+
+
+CHAT CONTENT
+
+user.svg : <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+user2.svg : <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+
+LARGE PICTURES
+
+Musique pic :
+Photo de Skitterphoto provenant de Pexels

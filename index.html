@@ -1,0 +1,487 @@
+<!--
+    MobileUI
+    Theme created by matndev
+    github : 
+    08/12/2019
+    
+    Credits :
+    Pattern SVG maker : http://patternico.com/#WLn455mafRhkMhl7 (matndev)
+    Icons : material.io
+
+    Details :
+    Licence : Free but non commercial use
+
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">    
+    <title>MobileUI - Bootstrap POC</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+<!-- NAVBAR TOP -->
+<nav class="navbar navbar-expand-md navbar-light fixed-top mui-navbar-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active m-auto" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item m-auto" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item m-auto" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-md-0"> <!-- linked to nav tag "md" -->
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </form>
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container-fluid d-flex flex-column mui-content" >
+    <div class="row flex-fill" >
+        <!-- CHAT & FORM -->
+        <div class="col-sm-9 d-sm-flex flex-column mui-messages-frame collapse multi-collapse show" id="messages-frame">
+            <div class="row d-flex flex-fill mui-messages-frame__content">
+                <div class="col d-flex flex-column flex-grow-1 p-3 justify-content-end">
+                    <div class="media mui-messages-frame__content--consignee">
+                        <img src="theme/icon/copyrighted/user2.svg" class="align-self-start mr-3 img-size--big" alt="Consignee" />
+                        <div class="media-body px-4 py-2 mui-messages-frame__content-message--consignee">
+                            <h6 class="mt-0">Margot ROBBIE</h6>
+                            <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).</p>                        
+                        </div>
+                    </div>
+                    <div class="media mui-messages-frame__content--sender">
+                        <div class="media-body px-4 py-2 mui-messages-frame__content-message--sender">
+                            <h6>Mister BEAN</h6>
+                            <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).</p>                        
+                        </div>
+                        <div class="d-flex flex-column ml-3 mui-messages-frame__content-avatar--sender">
+                            <img class="img-size--big" src="theme/icon/copyrighted/user.svg" alt="Sender" />
+                            <img class="img-size--big arrow-down-icon" src="theme/icon/arrow_right_alt-24px.svg" alt="Reply" />
+                            <img class="img-size--big" src="theme/icon/copyrighted/user2.svg" alt="Consignee" />
+                        </div>
+                    </div>
+                    <div class="media mui-messages-frame__content--consignee">
+                        <img src="theme/icon/copyrighted/user2.svg" class="align-self-start mr-3 img-size--big" alt="Consignee" />
+                        <div class="media-body px-4 py-2 mui-messages-frame__content-message--sender">
+                            <h6 class="mt-0">Margot ROBBIE</h6>
+                            <p><img src="assets/beach.jpg" class="img-fluid" alt="beach" /></p>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FORM -->
+            <div class="row mui-chat-form-frame">
+                <div class="col d-flex">
+                    <div class="d-flex flex-row mui-chat-form">
+                        <form class="mui-chat-form__content form-inline d-flex" (ngSubmit)="onSubmit()">
+                            <input type="text" required/>       
+                            <button class="btn" type="submit" ><img src="theme/icon/send-24px.svg" alt="Send" /></button>
+                        </form>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE MENU BUTTON -->
+        <div class="d-sm-none mui-slide-menu-button">
+            <button type="button" data-toggle="collapse" data-target=".multi-collapse" 
+                    aria-expanded="false" aria-controls="messages-frame side-menu-frame">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                        <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+            </button>
+        </div>    
+    
+        <!-- SIDE MENU -->
+        <div class="col-sm-3 d-sm-flex flex-column collapse multi-collapse mui-side-menu-frame" id="side-menu-frame">
+            <!-- SWITCH MENU BUTTON -->
+            <div class="row mui-switch-menu-frame">
+                <div class="col d-flex">
+                    <div class="mui-switch-menu">
+                        <nav class="nav nav-pills">
+                            <a class="nav-item nav-link active" href="#roomlist" data-toggle="tab" ><img src="theme/icon/list-24px.svg" alt="Rooms" /></a>
+                            <a class="nav-item nav-link" href="#userlist" data-toggle="tab" ><img src="theme/icon/people_alt-24px.svg" alt="Users" /></a>
+                            <a class="nav-item nav-link" href="#roominfo" data-toggle="tab" ><img src="theme/icon/info-24px.svg" alt="Infos" /></a>
+                            <a class="nav-item nav-link" href="#notifications" data-toggle="tab" ><img src="theme/icon/notifications-24px.svg" alt="Notifications" /></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content">
+                <!-- ROOM LIST -->
+                <div id="roomlist" class="row mui-h-side-menu tab-pane active fade show">
+                    <div class="col p-0 d-flex">
+                        <div class="mui-h-side-menu__list">
+                            <h6>ROOMS</h6>
+                            <ul class="list-group">
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row rounded-0 mui-transparent">
+                                    <div class="mui-room-content">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+                                        </svg>
+                                        <a class="ml-2">Room 1</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row mui-transparent">
+                                    <div class="mui-room-content" >
+                                        <img class="img-size--normal" src="assets/rooms-min/Firefox_logo_2019.svg" alt="room firefox" />
+                                        <a class="ml-2">Firefox Community Channel</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row rounded-0 mui-transparent">
+                                    <div class="mui-room-content">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+                                        </svg>
+                                        <a class="ml-2">Room 3</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row rounded-0 mui-transparent">
+                                    <div class="mui-room-content">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+                                        </svg>
+                                        <a class="ml-2">Room 4</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row rounded-0 mui-transparent">
+                                    <div class="mui-room-content">
+                                        <img class="img-size--normal" src="assets/rooms-min/vintage-music-antique-radio-9295-min.jpg" alt="room music diggers" />
+                                        <a class="ml-2">Music Diggers</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row rounded-0 mui-transparent">
+                                    <div class="mui-room-content">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+                                        </svg>
+                                        <a class="ml-2">Room 6</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row rounded-0 mui-transparent">
+                                    <div class="mui-room-content">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+                                        </svg>
+                                        <a class="ml-2">Room 7</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row rounded-0 mui-transparent">
+                                    <div class="mui-room-content">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+                                        </svg>
+                                        <a class="ml-2">Room 8</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>                                                                                                 
+                                <li class="mui-pre-submenu list-group-item d-flex flex-row rounded-0 mui-transparent">
+                                    <div class="mui-room-content">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+                                        </svg>
+                                        <a class="ml-2">Room 9</a>
+                                    </div>
+                                    <div class="mui-manage-room">
+                                        <button class="btn" id="btn_manageroom_3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="none" d="M0 0h24v24H0V0z"/>
+                                                <path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12 6.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 9c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- USER LIST -->
+                <div id="userlist" class="row mui-h-side-menu tab-pane fade">
+                    <div class="col p-0 d-flex">
+                        <div class="mui-h-side-menu__list">
+                            <h6>USERS</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                                <li class="list-group-item rounded-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 24 24" >
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                                        <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                    <a class="ml-2">Username</a></li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+                <!-- ROOM INFO -->
+                <div id="roominfo" class="row mui-h-side-menu tab-pane fade">
+                    <h6>INFORMATIONS</h6>
+                    <p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.
+                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour les curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont aussi reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham (1914).</p>
+                    <ul class="d-flex flex-row">
+                        <li><img src="theme/icon/people-24px.svg" class="mr-1" />15</li>
+                        <li><img src="theme/icon/lock-24px.svg" alt="lock icon" /></li>
+                    </ul>
+                </div>
+                <!-- NOTIFICATIONS LIST -->
+                <div id="notifications" class="row mui-h-side-menu tab-pane fade">
+                    <div class="col p-0 d-flex">
+                        <div class="mui-h-side-menu__list">
+                            <h6>NOTIFICATIONS</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex flex-row">
+                                    <div class="d-flex flex-row" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="min-width: 24px !important;min-height: 24px !important;">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zM7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42z"/>
+                                        </svg>
+                                        <p class="ml-2">ROOM 1 : @User1 a répondu à votre message.<br />"J'ai bien reçu votre message. Je suis disponible pour le rendez-vous que vous avez proposé à la date du 12/05/2019. Bien cordialement."</p>
+                                    </div>
+                                    <div class="mui-delete-notif">
+                                        <button class="btn p-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex flex-row">
+                                    <div class="d-flex flex-row" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="min-width: 24px !important;min-height: 24px !important;">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zM7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42z"/>
+                                        </svg>
+                                        <p class="ml-2">ROOM 1 : @User1 a répondu à votre message.</p>
+                                    </div>
+                                    <div class="mui-delete-notif">
+                                        <button class="btn p-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex flex-row">
+                                    <div class="d-flex flex-row" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="min-width: 24px !important;min-height: 24px !important;">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zM7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42z"/>
+                                        </svg>
+                                        <p class="ml-2">ROOM 1 : @User1 a répondu à votre message.</p>
+                                    </div>
+                                    <div class="mui-delete-notif">
+                                        <button class="btn p-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex flex-row">
+                                    <div class="d-flex flex-row" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="min-width: 24px !important;min-height: 24px !important;">
+                                            <path fill="none" d="M0 0h24v24H0V0z"/>
+                                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zM7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42z"/>
+                                        </svg>
+                                        <p class="ml-2">ROOM 1 : @User1 a répondu à votre message.</p>
+                                    </div>
+                                    <div class="mui-delete-notif">
+                                        <button class="btn p-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+
+            </div>
+        </div> 
+    
+    </div>  
+</div>
+
+</body>
+</html> 
+
+<!-- Bootstrap 4.4.1 / Jquery 3.4.1 -->
+<!--C:\Users\kamax\node_modules\bootstrap\dist\js\bootstrap.min.js-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- MobileUI Script -->
+<script src="mobileui.js" ></script>

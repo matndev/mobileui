@@ -1,0 +1,397 @@
+/* CSS used here will be applied after bootstrap.css */
+
+
+html, body {
+  font-family: 'Roboto', -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif,
+  "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+  color: hsl(0,0%,40%) !important;
+}
+
+/*
+ * TAGS
+ */
+
+li {
+  margin-top:10px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline:none !important;
+  box-shadow:none !important;
+}
+
+/*
+ * GENERIC CLASSES
+ */
+
+.img-size--big {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.img-size--normal {
+  width: 36px !important;
+  height: 36px !important;  
+}
+
+.img-size--small {
+  width: 24px !important;
+  height: 24px !important;  
+}
+
+.arrow-down-icon {
+  transform: rotate(90deg);
+}
+
+.mui-transparent {
+  background-color: transparent !important;
+  border: transparent !important;
+}
+
+/*
+ * NAVBAR TOP
+ */
+
+.mui-navbar-top {
+  background-color: hsl(0,0%,100%) !important;
+}
+
+/*
+ * CONTENT
+ */
+
+.mui-content {
+  height: calc(100vh - 56px) !important;
+  margin-top: 56px !important;
+  background-image: linear-gradient(to bottom, hsla(0,0%,95%,0) 10%, hsla(0,0%,98%,1)), url('theme/background/background03.png') !important;
+}
+
+/*
+ * CHAT & FORM
+ */
+
+@media (max-width: 576px) {
+  .mui-messages-frame {
+      display: flex;
+  }
+}
+
+.mui-messages-frame {
+  font-size: 15px;
+}
+
+.mui-messages-frame__content {
+  height: calc(100vh - 112px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.mui-messages-frame__content h6 {
+  font-weight: bold;
+}
+
+.mui-messages-frame__content--consignee {
+  min-width: 50px;
+  width: 60%;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+.mui-messages-frame__content-message--consignee {
+  border-radius: 2% !important;
+  background-color: hsl(0, 0%, 91%) !important;
+}
+
+.mui-messages-frame__content--sender {
+  min-width: 50px;
+  width: 60%;
+  margin-left: 30%;
+  margin-top: 30px;
+}
+
+.mui-messages-frame__content-message--sender {
+  border-radius:2% !important;
+  background-color: hsl(0, 0%, 95%) !important;
+}
+
+.mui-messages-frame__content-avatar--sender {
+  max-width: 60px;
+}
+
+.mui-chat-form-frame {
+  height: 56px;
+  background-color: hsl(0,0%,98%);
+  border-top: 2px solid hsl(0,0%,90%);
+}
+
+.mui-chat-form {
+  width: 100%;
+  flex: 0 0 auto;
+  overflow: hidden !important;
+}
+
+.mui-chat-form__content {
+  width: 100%;
+}
+
+.mui-chat-form__content input {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: .25rem;
+  flex-grow: 1;
+  line-height: 2;
+  background-color: hsl(0,0%,86%);
+  border: 1px solid hsl(0,0%,82%);
+}
+
+.mui-chat-form__content input:active {
+  border:none;  
+}
+
+.mui-chat-form__content img {
+  transform: rotate(-45deg);
+  margin-bottom: 5px;
+  opacity: 50%;
+}
+
+
+/*
+ * SLIDE MENU BUTTON
+ */
+
+ .mui-slide-menu-button {
+  width:70px;
+  height:70px;
+  position:absolute;
+  left:50%;
+  bottom:90px;
+  transform: translate(-20px);
+  z-index:2;
+}
+
+.mui-slide-menu-button button {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+  background-color: hsl(134, 48%, 69%);
+  border: none;
+}
+
+.mui-slide-menu-button button:hover {
+	transition: all .5s;
+	transition-timing-function: cubic-bezier(.2, 3, .4, 1);
+  transform: scale(1.1, 1.1);
+}
+
+/*
+ * SIDE MENU FRAME
+ */
+
+@media (max-width: 576px) {
+  .mui-side-menu-frame.show {
+      display: flex;
+  }
+}
+
+.mui-side-menu-frame {
+  background: linear-gradient(to bottom, hsl(0,0%,90%) 10%, hsl(0,0%,94%));
+}
+
+.mui-side-menu-frame li {
+  margin-top: 0 !important;
+  padding: 0.5rem 1.25rem !important;
+}
+
+.mui-side-menu-frame li:hover:not(.mui-toolbar-menu) {
+  background-color: hsl(0,0%,85%) !important;
+}
+
+.mui-side-menu-frame svg {
+  fill: hsl(0, 0%, 60%);
+}
+
+.mui-side-menu-frame .list-group-item.active {
+  background-color: hsl(0,0%,85%) !important;
+  color: hsl(0,0%,40%) !important;
+}
+
+.mui-side-menu-frame li:hover > .mui-manage-room {
+  display: flex !important;
+  flex-grow: 1;
+  justify-content: end;
+  align-items: center;
+  visibility: visible !important;
+}
+
+.mui-side-menu-frame li:hover > .mui-delete-notif {
+  display: flex !important;
+  flex-grow: 1;
+  justify-content: end;
+  align-items: flex-start;
+  visibility: visible !important;
+}
+
+/*
+ * SWITCH MENU
+ */
+
+.mui-switch-menu-frame {
+  align-items: center;
+  height: 57px;
+}
+
+.mui-switch-menu {
+  flex: 0 1 auto;
+  overflow: hidden;
+}
+
+.mui-switch-menu .nav-pills, .mui-switch-menu .nav-link {
+  border-radius: 0 !important;
+}
+
+.mui-switch-menu .nav-item {
+  border-bottom: 2px solid transparent;
+}
+
+.mui-switch-menu .nav-item.active {
+  background-color: transparent !important;
+  border-bottom: 2px solid black;
+  transition: border-bottom 0.5s linear;
+}
+
+.mui-switch-menu .nav-item img {
+  opacity: 30% !important;
+}
+
+.mui-switch-menu .nav-item.active img {
+  opacity: 100% !important;
+}
+
+/* CSS ANIMATION on SwitchMenu */
+.tab-content div {
+  animation: 0.1s linear 0s 1 slideInFromLeft;
+}
+
+
+/*
+ * SIDE MENU CONTENT
+ */
+
+.mui-h-side-menu {
+    height:calc(100vh - 113px) !important;
+    overflow-y: auto;
+}
+
+.mui-h-side-menu__list {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.mui-h-side-menu__list h6 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-left: 1.25rem;
+  font-weight: bold;
+}
+
+/*
+ * ROOM LIST
+ */
+
+.mui-room-content a {
+  cursor: pointer;
+}
+
+.mui-manage-room {
+  visibility: hidden;
+}
+
+.mui-manage-room button {
+  border: none;
+}
+
+.mui-toolbar-menu {
+  background-color: hsl(0, 0%, 80%) !important;
+  border: transparent !important;
+}
+
+.mui-toolbar-menu svg {
+  fill: hsl(0, 0%, 60%);
+}
+
+.mui-toolbar-menu svg:hover {
+  fill: hsl(0, 0%, 40%);
+}
+
+.mui-toolbar-menu li:hover {
+  background-color: hsl(0, 0%, 80%) !important;
+  border: transparent !important;
+}
+
+/*
+ * USER LIST
+ */
+
+#userlist a {
+  cursor: pointer;
+}
+
+#userlist li {
+  background-color: transparent;
+  border:transparent;
+}
+
+/*
+ * ROOM INFO
+ */
+
+#roominfo h6 {
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
+  font-weight: bold;
+}
+
+#roominfo p {
+  padding: 1rem;
+}
+
+#roominfo ul {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: .5rem;
+  list-style-type: none;
+}
+
+/*
+ * NOTIFICATIONS
+ */
+
+#notifications p {
+  font-size: 14px !important;
+}
+
+#notifications li:hover {
+  background-color: hsl(0,0%,90%) !important;
+}
+
+.mui-delete-notif {
+  visibility: hidden;
+}
+
+.mui-delete-notif button {
+  border: none;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
